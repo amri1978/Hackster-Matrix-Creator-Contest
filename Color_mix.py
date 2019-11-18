@@ -66,7 +66,7 @@ def colorPick():
     elif x <= 39:
         color = 'white'
     else:
-        color = 'white' #'darkgoldenrod'
+        color = 'darkgoldenrod'
     return color
 
 	
@@ -283,7 +283,7 @@ while True:
         renderFast()
         tag = nfc.read.scan({"info": True, "pages": False, "ndef": False,"page": 0})
         if(tag.status == 256):
-            if tag.info.UID == '0A24E83C': #Clockwise direction		
+            if tag.info.UID == '0A24E83C': #Clockwise direction	Change the ID with your RFID Tag ID	
                 direction = 1
             elif tag.info.UID != '':
                 direction = -1
